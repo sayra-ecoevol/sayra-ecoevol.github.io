@@ -50,6 +50,7 @@
             flex-direction: column;
             gap: 1rem;
             align-items: center;
+            text-align: center;
         }
         .about-section p {
             text-align: left; /* Ensures the text is aligned to the left */
@@ -78,23 +79,13 @@
         a:hover {
             text-decoration: underline;
         }
-        footer {
-            margin-top: 2rem;
-            padding: 1rem;
-            background: #4682B4; /* Steel Blue */
-            color: #FFFFFF; /* White */
-            text-align: center;
-        }
-        .info {
-            margin-top: 2rem;
-            font-size: 1.2rem;
-            text-align: center;
-        }
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .about-section {
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
             }
             .profile-pic {
                 width: 120px;
@@ -130,14 +121,22 @@
                     I am Shreya Arya, a final-year PhD student in Physics at the University of Illinois Urbana-Champaign (UIUC),
                     advised by <strong><a href="https://sib.illinois.edu/profile/jodwyer" target="_blank">James O'Dwyer</a></strong>. 
                     My research focuses on understanding the structure and dynamics of microbial communities through a combination 
-                    of theoretical models and computational approaches.
+                    of theoretical models and computational approaches. I am interested in exploring effective, middle-ground approaches to ecology, connecting mechanistic models of community ecology with large-data assimilation and machine learning techniques. 
+                    I am also interested in host-associated microbiomes, particularly, the human gut microbiome, and applications of microbial ecology to disease alleviation and climate change mitigation.  
                 </p>
+                
                 <p>
                     Before coming to UIUC for graduate school, I studied Parts II & III in Natural (Physical) Sciences at St. Edmund's College, University of Cambridge, UK. I also hold a B.Sc. (Honors) in Physics from St. Stephen’s College, University of Delhi, India.
                 </p>
+                <p> 
+                    In the summer of 2024, I was a graduate research intern at Vedanta Biosciences in Cambridge, USA, where I worked with my mentor
+                    <a href="https://scholar.google.com/citations?hl=en&user=Wf20-3UAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Rajita Menon</a></strong> to explore ecological dynamics in a large microbial community. This rationally designed community is expected to be employed for the purpose of disease alleviation. 
+                </p>
+
                 <p>
                     <strong>I am actively seeking postdoctoral opportunities in the area of theoretical and computational microbial community ecology for Fall 2025. Please reach out to me regarding any available positions.</strong>
                 </p>
+
                 <p>
                     <a href="https://drive.google.com/file/d/1Y1kpgEPejnPqrggoWM-Bjb0yINXDafGM/view?usp=sharing" target="_blank">A copy of my CV is here (updated January 2025)</a>
                 </p>
@@ -147,7 +146,8 @@
         <section id="research" class="research-section">
             <h3>Research</h3>
             <p>
-                In my graduate work, I have focused on uncovering the mechanisms that shape microbiome diversity and functions.
+                In my graduate work, I have focused on uncovering the mechanisms that shape microbiome diversity and functions. By
+                leveraging statistical learning and ecological theory, I aim to:
             </p>
             <ul>
                 <li>Model microbial interactions and their ecological implications.</li>
@@ -161,45 +161,29 @@
             <ul style="list-style-type: none; padding-left: 0.5em;">
                 <li style="margin-bottom: 1.5em;">
                     <span style="font-weight: bold;">Sparsity of higher-order landscape interactions enables learning and prediction for microbiomes</span>
-                    (<a href="https://www.biorxiv.org/content/10.1101/2023.04.12.536602v1" target="_blank">open access pre-print at biorxiv</a>)
+                    (<a href="https://www.biorxiv.org/content/10.1101/2023.04.12.536602v1" target="_blank">open access pre-print at biorxiv</a>)<br>
+                    <em><strong>Shreya Arya*</strong>, Ashish B. George*, James O'Dwyer</em><br>
+                    Proceedings of the National Academy of Sciences (PNAS), 
+                    <a href="https://doi.org/10.1073/pnas.2307313120" target="_blank">https://doi.org/10.1073/pnas.2307313120</a>
                 </li>
+                <li>
+                    <a href="https://ecoevorxiv.org/repository/view/7517/" target="_blank" style="font-weight: bold;">The Architecture of Theory and Data in Microbiome Design: Towards an S-matrix for microbiomes, 2024</a><br>
+                    <em><strong>Shreya Arya*</strong>, Ashish B. George*, James O'Dwyer*</em><br>
+                    Status: Under review<br>
+                    <em>Invited review, special issue (Microbial Systems and Synthetic Biology) of Current Opinion in Microbiology</em>
+                </li>
+                * denotes equal contribution. 
             </ul>
         </section>
 
         <section id="contact" class="research-section">
             <h3>Contact</h3>
+            <p>If you'd like to collaborate or learn more about my research, please feel free to reach out!</p>
             <ul>
                 <li>Email: <a href="mailto:shreyaa5@illinois.edu">shreyaa5@illinois.edu</a></li>
-                <li>Office: 183, Morrill Hall, UIUC</li>
+                <li>Office: 183, Morrill Hall, School of Integrative Biology, UIUC, Illinois, USA</li>
             </ul>
         </section>
-
-        <div class="info">
-            <div>Page Views: <span id="view-counter">Loading...</span></div>
-            <div>Your Location: <span id="location">Loading...</span></div>
-        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Shreya Arya</p>
-    </footer>
-
-    <script>
-        // Views Counter using CountAPI
-        fetch("https://api.countapi.xyz/hit/shreya-arya-page/views")
-            .then((response) => response.json())
-            .then((data) => {
-                document.getElementById("view-counter").innerText = data.value;
-            })
-            .catch((error) => console.error("Error fetching view count:", error));
-
-        // Location Tracker using ip-api
-        fetch("http://ip-api.com/json/")
-            .then((response) => response.json())
-            .then((data) => {
-                document.getElementById("location").innerText = `${data.city}, ${data.region}, ${data.country}`;
-            })
-            .catch((error) => console.error("Error fetching location:", error));
-    </script>
 </body>
 </html>
