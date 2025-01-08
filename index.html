@@ -27,12 +27,17 @@
             color: #FFFFFF; /* White */
             padding: 0.5rem 2rem;
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         nav a {
             color: #FFFFFF; /* White */
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
+            padding: 8px 0;
         }
         nav a:hover {
             text-decoration: underline;
@@ -42,17 +47,18 @@
         }
         .about-section {
             display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            text-align: center;
         }
         .profile-pic {
-        width: 200px; /* Set a specific width */
-        height: 133px; /* Force the height to match the width for a square aspect ratio */
-        border-radius: 5%; /* Slightly rounded corners */
-        display: block;
-        margin: 0 auto; /* Centers the image */
-
-}
+            width: 150px; /* Set a specific width */
+            height: 150px; /* Force the height to match the width for a square aspect ratio */
+            border-radius: 50%; /* Make the image circular */
+            display: block;
+            margin: 0 auto;
+        }
 
         .research-section {
             background: #E6F2FF; /* Light Blue */
@@ -70,6 +76,25 @@
         }
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 5px 0;
+            }
         }
     </style>
 </head>
@@ -106,18 +131,12 @@
                     <a href="https://scholar.google.com/citations?hl=en&user=Wf20-3UAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Rajita Menon</a></strong> to explore ecological dynamics in a large microbial community. This rationally designed community is expected to be employed for the purpose of disease alleviation. 
                 </p>
 
-
-
-            </p>
-        </strong> I am actively seeking postdoctoral opportunities in the area of theoretical and computational microbial community ecology for Fall 2025  </strong>. Please feel free to contact me regarding any available positions.
-
-                
-            <p>
+                <p>
+                    I am actively seeking postdoctoral opportunities in the area of theoretical and computational microbial community ecology for Fall 2025. Please feel free to contact me regarding any available positions.
+                </p>
 
                 <p>
-
-                        <a href="https://drive.google.com/file/d/1Y1kpgEPejnPqrggoWM-Bjb0yINXDafGM/view?usp=sharing" target="_blank">A copy of my CV is here (updated January 2025)</a>
-             
+                    <a href="https://drive.google.com/file/d/1Y1kpgEPejnPqrggoWM-Bjb0yINXDafGM/view?usp=sharing" target="_blank">A copy of my CV is here (updated January 2025)</a>
                 </p>
             </div>
         </section>
@@ -131,10 +150,9 @@
             <ul>
                 <li>Model microbial interactions and their ecological implications.</li>
                 <li>Bridge theoretical predictions with experimental microbiome data.</li>
-                <li>Understand the role of the gut microbiome in human health and disease</li>
+                <li>Understand the role of the gut microbiome in human health and disease.</li>
             </ul>
         </section>
-
 
         <section id="publications" class="research-section">
             <h3>Publications</h3>
@@ -155,7 +173,6 @@
                 * denotes equal contribution. 
             </ul>
         </section>
-        
 
         <section id="contact" class="research-section">
             <h3>Contact</h3>
